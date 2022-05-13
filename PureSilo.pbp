@@ -8,28 +8,24 @@
   <section name="data">
     <explorer view="../../App/purebasic/examples/" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2022-05-13 12:59" user="micah" host="jarvis"/>
+    <lastopen date="2022-05-13 18:18" user="micah" host="jarvis"/>
   </section>
   <section name="files">
     <file name="modules/log.pbi">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
       <fingerprint md5="00b6e758f22995f6cf1617917f4816d5"/>
     </file>
-    <file name="modules/string.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
-      <fingerprint md5="35423af3f119eb75a152e074e6e1a490"/>
-    </file>
     <file name="modules/math/rectangle.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="1d6094b81699bd32b5ca47da2561e43a"/>
     </file>
     <file name="modules/math/vector.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="d7e6ec51d589e4009fed2b475525d28e"/>
     </file>
     <file name="modules/math/vector2.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
-      <fingerprint md5="220894982da9ed8dbe091869fd14a568"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
+      <fingerprint md5="aad1f1eae1a6e0aebaa9408228919a7f"/>
     </file>
     <file name="modules/math/vector3.pbi">
       <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
@@ -38,6 +34,10 @@
     <file name="modules/math/vector4.pbi">
       <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
       <fingerprint md5="39aff4b19096faec2d3b03aac039f296"/>
+    </file>
+    <file name="modules/string.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="35423af3f119eb75a152e074e6e1a490"/>
     </file>
   </section>
   <section name="targets">
