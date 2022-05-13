@@ -125,29 +125,29 @@ Module Vector2
   
   Procedure.s Vec2i_ToString(*Vec.sVec2i, Format.s = "<%X, %Y>")
     Protected str.s = Format
-    ReplaceString(str, "%X", Str(*Vec\x), #PB_String_NoCase | #PB_String_InPlace)
-    ReplaceString(str, "%Y", Str(*Vec\y), #PB_String_NoCase | #PB_String_InPlace)
+    str = ReplaceString(str, "%X", Str(*Vec\x), #PB_String_NoCase)
+    str = ReplaceString(str, "%Y", Str(*Vec\y), #PB_String_NoCase)
     ProcedureReturn str
   EndProcedure
   
   Procedure.s Vec2q_ToString(*Vec.sVec2q, Format.s = "<%X, %Y>")
     Protected str.s = Format
-    ReplaceString(str, "%X", Str(*Vec\x), #PB_String_NoCase | #PB_String_InPlace)
-    ReplaceString(str, "%Y", Str(*Vec\y), #PB_String_NoCase | #PB_String_InPlace)
+    str = ReplaceString(str, "%X", Str(*Vec\x), #PB_String_NoCase)
+    str = ReplaceString(str, "%Y", Str(*Vec\y), #PB_String_NoCase)
     ProcedureReturn str
   EndProcedure
   
   Procedure.s Vec2f_ToString(*Vec.sVec2f, Format.s = "<%X, %Y>", NbDecimals = 4)
     Protected str.s = Format
-    ReplaceString(str, "%X", StrF(*Vec\x, NbDecimals), #PB_String_NoCase | #PB_String_InPlace)
-    ReplaceString(str, "%Y", StrF(*Vec\y, NbDecimals), #PB_String_NoCase | #PB_String_InPlace)
+    str = ReplaceString(str, "%X", StrF(*Vec\x, NbDecimals), #PB_String_NoCase)
+    str = ReplaceString(str, "%Y", StrF(*Vec\y, NbDecimals), #PB_String_NoCase)
     ProcedureReturn str
   EndProcedure
   
   Procedure.s Vec2d_ToString(*Vec.sVec2d, Format.s = "<%X, %Y>", NbDecimals = 4)
     Protected str.s = Format
-    ReplaceString(str, "%X", StrD(*Vec\x, NbDecimals), #PB_String_NoCase | #PB_String_InPlace)
-    ReplaceString(str, "%Y", StrD(*Vec\y, NbDecimals), #PB_String_NoCase | #PB_String_InPlace)
+    str = ReplaceString(str, "%X", StrD(*Vec\x, NbDecimals), #PB_String_NoCase)
+    str = ReplaceString(str, "%Y", StrD(*Vec\y, NbDecimals), #PB_String_NoCase)
     ProcedureReturn str    
   EndProcedure
   

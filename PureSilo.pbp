@@ -8,35 +8,35 @@
   <section name="data">
     <explorer view="../../App/purebasic/examples/" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2022-05-13 20:08" user="mike" host="tinyjarvis"/>
+    <lastopen date="2022-05-13 20:32" user="mike" host="tinyjarvis"/>
   </section>
   <section name="files">
     <file name="modules/log.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+-"/>
-      <fingerprint md5="00b6e758f22995f6cf1617917f4816d5"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="94e3de3c5d3095a30596e7673918dc06"/>
     </file>
     <file name="modules/math/rectangle.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
       <fingerprint md5="1d6094b81699bd32b5ca47da2561e43a"/>
     </file>
     <file name="modules/math/vector.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
       <fingerprint md5="d7e6ec51d589e4009fed2b475525d28e"/>
     </file>
     <file name="modules/math/vector2.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
-      <fingerprint md5="8d8938e18bb6d1e0ce068d5edba712f3"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
+      <fingerprint md5="bc6e1acf1eacdaec96b03c3a32029640"/>
     </file>
     <file name="modules/math/vector3.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
       <fingerprint md5="9f25a54b790f2c0b46e224d6c220f790"/>
     </file>
     <file name="modules/math/vector4.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+++"/>
       <fingerprint md5="39aff4b19096faec2d3b03aac039f296"/>
     </file>
     <file name="modules/string.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="++"/>
       <fingerprint md5="35423af3f119eb75a152e074e6e1a490"/>
     </file>
   </section>

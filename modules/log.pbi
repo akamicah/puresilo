@@ -244,7 +244,7 @@ CompilerIf #PB_Compiler_IsMainFile
 
 CompilerEndIf
 ; IDE Options = PureBasic 6.00 Beta 7 (Linux - x64)
-; CursorPosition = 231
-; FirstLine = 204
+; CursorPosition = 187
+; FirstLine = 176
 ; Folding = ----
 ; EnableXP
