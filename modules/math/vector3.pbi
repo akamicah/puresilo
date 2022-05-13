@@ -6,7 +6,6 @@
 ; Licence: MIT
 ; --------------------------------------------------------------------------------
 
-
 DeclareModule Vector3
 
   Structure sVector3f Align #PB_Structure_AlignC

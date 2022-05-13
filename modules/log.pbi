@@ -30,7 +30,7 @@
 ; Example: [%hh:%ii:%ss] [%Module::%Proc] %TYPE: %msg
 
 DeclareModule Log
-  
+
   Enumeration Level
     #Log_All
     #Log_Trace
@@ -41,45 +41,45 @@ DeclareModule Log
     #Log_Fatal
     #Log_None
   EndEnumeration
-  
+
   Prototype pLogOutput(Level, Message.s)
-  
+
   Declare AttachLogOutput(*Output.pLogOutput) ; Add a log output/target. Procedure must match pLogOutput signature.
   Declare RemoveLogOutput(*Output.pLogOutput) ; Remove a log output/target.
   Declare SetLogLevel(LogLevel = #Log_Info) ; Set Log Level (#Log_All to #Log_None)
   Declare SetLogFormat(LogFormat.s = "[%hh:%ii:%ss] %Type: %msg") ; See Above
   Declare LogToConsole(State = #True) ; Enable/disable printing to console
-  
+
   Declare LogMessage(Message.s, LogLevel = #Log_Info, ModuleName.s = "", ProcedureName.s = "") ; Log message (use helpers below)
-  
+
   Macro Trace(Message)
     Log::LogMessage(Message, Log::#Log_Trace, #PB_Compiler_Module, #PB_Compiler_Procedure)
   EndMacro
-  
+
   Macro Info(Message)
     Log::LogMessage(Message, Log::#Log_Info, #PB_Compiler_Module, #PB_Compiler_Procedure)
   EndMacro
-  
+
   Macro Success(Message)
     Log::LogMessage(Message, Log::#Log_Success, #PB_Compiler_Module, #PB_Compiler_Procedure)
   EndMacro
-  
+
   Macro Warning(Message)
     Log::LogMessage(Message, Log::#Log_Warning, #PB_Compiler_Module, #PB_Compiler_Procedure)
   EndMacro
-  
+
   Macro Error(Message)
     Log::LogMessage(Message, Log::#Log_Error, #PB_Compiler_Module, #PB_Compiler_Procedure)
   EndMacro
-  
+
   Macro Fatal(Message)
     Log::LogMessage(Message, Log::#Log_Fatal, #PB_Compiler_Module, #PB_Compiler_Procedure)
   EndMacro
-  
+
 EndDeclareModule
 
 Module Log
-  
+
   Structure sLogger
     *mutex
     logLevel.i
@@ -87,13 +87,13 @@ Module Log
     toConsole.a
     List *output()
   EndStructure
-  
+
   Global gLogger.sLogger
   With gLogger
     \mutex = CreateMutex()
     \logFormat = "[%hh:%ii:%ss] %Type: %msg"
   EndWith
-  
+
   Procedure ConsoleLogOutput(Level, Message.s)
     Select Level
       Case Log::#Log_Trace
@@ -105,14 +105,14 @@ Module Log
       Case Log::#Log_Warning
         ConsoleColor(14, 0)
       Case Log::#Log_Error
-        ConsoleColor(12, 0)  
+        ConsoleColor(12, 0)
       Case Log::#Log_Fatal
         ConsoleColor(0, 12)
     EndSelect
     PrintN(Message)
     ConsoleColor(7, 0) ; Revert to Default
   EndProcedure
-  
+
   Procedure AttachLogOutput(*Output.pLogOutput)
     Protected exists.a = #False
     With gLogger
@@ -130,7 +130,7 @@ Module Log
       UnlockMutex(\mutex)
     EndWith
   EndProcedure
-  
+
   Procedure RemoveLogOutput(*Output.pLogOutput)
     With gLogger
       LockMutex(\mutex)
@@ -143,15 +143,15 @@ Module Log
       UnlockMutex(\mutex)
     EndWith
   EndProcedure
-  
+
   Procedure LogToConsole(State = #True)
     gLogger\toConsole = State
   EndProcedure
-  
+
   Procedure SetLogLevel(LogLevel = #Log_Info)
     gLogger\logLevel = LogLevel
   EndProcedure
-  
+
   Procedure SetLogFormat(LogFormat.s = "[%hh:%ii:%ss] %Type: %msg")
     LogFormat = Trim(LogFormat)
     If LogFormat = ""
@@ -159,16 +159,16 @@ Module Log
     EndIf
     gLogger\logFormat = LogFormat
   EndProcedure
-  
+
   Procedure LogMessage(Message.s, LogLevel = #Log_Info, ModuleName.s = "", ProcedureName.s = "")
     Protected type.s, output.s, *handler.pLogOutput
-    
+
     LockMutex(gLogger\mutex)
-    
+
     If LogLevel < gLogger\logLevel
       ProcedureReturn
     EndIf
-    
+
     Select LogLevel
       Case #Log_Trace
         type = "Trace"
@@ -183,7 +183,7 @@ Module Log
       Case #Log_Fatal
         type = "Fatal"
     EndSelect
-    
+
     output = FormatDate(gLogger\logFormat, Date())
     output = ReplaceString(output, "%type", LCase(type), #PB_String_CaseSensitive)
     output = ReplaceString(output, "%Type", type, #PB_String_CaseSensitive)
@@ -195,9 +195,9 @@ Module Log
     output = ReplaceString(output, "%proc", LCase(ProcedureName), #PB_String_CaseSensitive)
     output = ReplaceString(output, "%Proc", ProcedureName, #PB_String_CaseSensitive)
     output = ReplaceString(output, "%PROC", UCase(ProcedureName), #PB_String_CaseSensitive)
-    
+
     Debug output
-    
+
     If gLogger\toConsole
       ConsoleLogOutput(LogLevel, output)
     EndIf
@@ -206,18 +206,18 @@ Module Log
       *handler(LogLevel, output)
     Next
     UnlockMutex(gLogger\mutex)
-    
+
   EndProcedure
-  
+
 EndModule
 
 ;- Example Start
 CompilerIf #PB_Compiler_IsMainFile
-  
+
   DeclareModule LoggerTest
     Declare RunTest()
   EndDeclareModule
-  
+
   Module LoggerTest
     Procedure RunTest()
       Log::Trace("Message!")
@@ -228,20 +228,20 @@ CompilerIf #PB_Compiler_IsMainFile
       Log::Fatal("Message!")
     EndProcedure
   EndModule
-  
+
   OpenConsole("Logger Example")
   EnableGraphicalConsole(#True)
-  
+
   Log::LogToConsole(#True)
   Log::SetLogLevel(Log::#Log_All)
   Log::SetLogFormat("[%hh:%ii:%ss] [%Module::%Proc] %TYPE: %msg")
-  
+
   LoggerTest::RunTest()
-  
+
   PrintN("Example ended. Hit return to quit")
   Input()
-  End  
-  
+  End
+
 CompilerEndIf
 ; IDE Options = PureBasic 6.00 Beta 7 (Linux - x64)
 ; CursorPosition = 231

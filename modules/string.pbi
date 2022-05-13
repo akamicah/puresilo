@@ -53,10 +53,9 @@ Module String
     ProcedureReturn String
   EndProcedure
 
-EndModule 
-
+EndModule
 ; IDE Options = PureBasic 6.00 Beta 7 (Linux - x64)
-; CursorPosition = 38
-; FirstLine = 16
+; CursorPosition = 35
+; FirstLine = 15
 ; Folding = --
 ; EnableXP

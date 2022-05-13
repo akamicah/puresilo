@@ -6,7 +6,6 @@
 ; Licence: MIT
 ; --------------------------------------------------------------------------------
 
-
 DeclareModule Vector4
 
   Structure sVector4f Align #PB_Structure_AlignC

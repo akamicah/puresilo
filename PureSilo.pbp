@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 6.00 Beta 7 (Linux - x64)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="PureBasic Silo"/>
+    <comment>Silo of reusable code for developing application in PureBasic</comment>
+  </section>
+  <section name="data">
+    <explorer view="../../App/purebasic/examples/" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2022-05-13 12:58" user="micah" host="jarvis"/>
+  </section>
+  <section name="files"/>
+  <section name="targets">
+    <target name="Default Target" enabled="1" default="1">
+      <inputfile value=""/>
+      <outputfile value=""/>
+      <options xpskin="1" debug="1" optimizer="0"/>
+    </target>
+  </section>
+</project>
