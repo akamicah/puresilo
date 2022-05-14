@@ -10,4 +10,4 @@ This code is free to use - please also feel free to fork and contribute with pul
 - Code included must conform to a standard style
 - Code should be platform and architecture agnostic
 - Partially platform agnostic code will be acceptable providing it runs on at least two platforms (i.e. Win, Linux)
-- If a platform is not supported, it must be clearly identified as such to allow contributors to fill in the gaps.
+- If a platform is not supported, it must be clearly identified as such to allow contributors to fill in the gaps (by raising it as an issue in the Issue tracker)
