@@ -6,7 +6,7 @@ This library of code contains both original and adapted code from other sources.
 This code is free to use - please also feel free to fork and contribute with pull requests.
 
 ## Criteria
-
+- Code must be encapsulated in modules - No cluttering global scope
 - Code included must conform to a standard style
 - Code should be platform and architecture agnostic
 - Partially platform agnostic code will be acceptable providing it runs on at least two platforms (i.e. Win, Linux)
