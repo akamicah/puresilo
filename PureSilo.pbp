@@ -8,7 +8,7 @@
   <section name="data">
     <explorer view="../../App/purebasic/examples/" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2022-05-14 16:22" user="micah" host="jarvis"/>
+    <lastopen date="2022-05-14 16:46" user="micah" host="jarvis"/>
   </section>
   <section name="files">
     <file name="examples/Log.pb">
@@ -20,36 +20,40 @@
       <fingerprint md5="5d3dec9a2bff74c2a91b0df610fa9914"/>
     </file>
     <file name="modules/log.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
       <fingerprint md5="2a0fa4f1b9dffcd92f3c80c3fc231602"/>
     </file>
     <file name="modules/math/math.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
       <fingerprint md5="ca6a3a996da18c96fee4067d5031e895"/>
     </file>
     <file name="modules/math/rectangle.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
       <fingerprint md5="d6b335cd7f7e205e756986287f58dcfd"/>
     </file>
     <file name="modules/math/vector.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="++-"/>
       <fingerprint md5="d7e6ec51d589e4009fed2b475525d28e"/>
     </file>
     <file name="modules/math/vector2.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
       <fingerprint md5="8006afe1de391c9ab9b9a7938bcfa41a"/>
     </file>
     <file name="modules/math/vector3.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
       <fingerprint md5="bfb4e9f979a378e742ca4ca5abf93ada"/>
     </file>
     <file name="modules/math/vector4.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+--"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
       <fingerprint md5="8e4ddaac4b8312610a87501220c0c7e6"/>
     </file>
     <file name="modules/string.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="+-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="++"/>
       <fingerprint md5="35423af3f119eb75a152e074e6e1a490"/>
+    </file>
+    <file name="modules/types.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="4484dfce06d23f0ffbc71baa7d7854b5"/>
     </file>
   </section>
   <section name="targets">
