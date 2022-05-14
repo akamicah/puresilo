@@ -201,48 +201,17 @@ Module Log
     If gLogger\toConsole
       ConsoleLogOutput(LogLevel, output)
     EndIf
+    
     ForEach gLogger\output()
       *handler = gLogger\output()
       *handler(LogLevel, output)
     Next
+    
     UnlockMutex(gLogger\mutex)
 
   EndProcedure
 
 EndModule
-
-;- Example Start
-CompilerIf #PB_Compiler_IsMainFile
-
-  DeclareModule LoggerTest
-    Declare RunTest()
-  EndDeclareModule
-
-  Module LoggerTest
-    Procedure RunTest()
-      Log::Trace("Message!")
-      Log::Info("Message!")
-      Log::Success("Message!")
-      Log::Warning("Message!")
-      Log::Error("Message!")
-      Log::Fatal("Message!")
-    EndProcedure
-  EndModule
-
-  OpenConsole("Logger Example")
-  EnableGraphicalConsole(#True)
-
-  Log::LogToConsole(#True)
-  Log::SetLogLevel(Log::#Log_All)
-  Log::SetLogFormat("[%hh:%ii:%ss] [%Module::%Proc] %TYPE: %msg")
-
-  LoggerTest::RunTest()
-
-  PrintN("Example ended. Hit return to quit")
-  Input()
-  End
-
-CompilerEndIf
 ; IDE Options = PureBasic 6.00 Beta 7 (Linux - x64)
 ; CursorPosition = 187
 ; FirstLine = 176
