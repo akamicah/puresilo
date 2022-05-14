@@ -15,7 +15,7 @@ EndDeclareModule
 Module Math
   
   Procedure.d RSqr(Number.d)
-    ProcedureReturn 1.0 / Number
+    ProcedureReturn 1.0 / Sqr(Number)
   EndProcedure  
   
 EndModule
