@@ -59,6 +59,5 @@ Input()
 CloseConsole()
 End 0
 ; IDE Options = PureBasic 6.00 Beta 7 (Linux - x64)
-; CursorPosition = 38
-; FirstLine = 18
+; CursorPosition = 31
 ; EnableXP
