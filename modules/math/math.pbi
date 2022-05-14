@@ -2,7 +2,7 @@
 ; Math Additional Library
 ;
 ; Revision: 14 May 2022
-; Author: aka4micah (https://github.com/akamicah)
+; Author: akamicah (https://github.com/akamicah)
 ; Licence: MIT
 ; --------------------------------------------------------------------------------
 
