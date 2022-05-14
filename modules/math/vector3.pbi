@@ -33,83 +33,83 @@ DeclareModule Vector3
     y.d
     z.d
   EndStructure
-  
+
   ; Initialise Vectors
   Declare InitVec3i(*Vector.sVec3i, X.i = 0, Y.i = 0, Z.i = 0)
   Declare InitVec3q(*Vector.sVec3q, X.q = 0, Y.q = 0, Z.q = 0)
   Declare InitVec3f(*Vector.sVec3f, X.f = 0, Y.f = 0, Z.f = 0)
   Declare InitVec3d(*Vector.sVec3d, X.d = 0, Y.d = 0, Z.d = 0)
-  
+
   ; Create a string that represents the supplied vector using the format provided
   Declare.s Vec3i_ToString(*Vec.sVec3i, Format.s = "<x, y, z>")
   Declare.s Vec3q_ToString(*Vec.sVec3q, Format.s = "<x, y, z>")
   Declare.s Vec3f_ToString(*Vec.sVec3f, Format.s = "<x, y, z>", NbDecimals = 4)
   Declare.s Vec3d_ToString(*Vec.sVec3d, Format.s = "<x, y, z>", NbDecimals = 4)
-  
+
   ; Add two vectors together
   Declare Vec3i_Add(*LH.sVec3i, *RH.sVec3i, *Result.sVec3i)
   Declare Vec3q_Add(*LH.sVec3q, *RH.sVec3q, *Result.sVec3q)
   Declare Vec3f_Add(*LH.sVec3f, *RH.sVec3f, *Result.sVec3f)
   Declare Vec3d_Add(*LH.sVec3d, *RH.sVec3d, *Result.sVec3d)
-  
+
   ; Subtract two vectors
   Declare Vec3i_Sub(*LH.sVec3i, *RH.sVec3i, *Result.sVec3i)
   Declare Vec3q_Sub(*LH.sVec3q, *RH.sVec3q, *Result.sVec3q)
   Declare Vec3f_Sub(*LH.sVec3f, *RH.sVec3f, *Result.sVec3f)
   Declare Vec3d_Sub(*LH.sVec3d, *RH.sVec3d, *Result.sVec3d)
-  
+
   ; Multiply two vectors
   Declare Vec3i_Mul(*LH.sVec3i, *RH.sVec3i, *Result.sVec3i)
   Declare Vec3q_Mul(*LH.sVec3q, *RH.sVec3q, *Result.sVec3q)
   Declare Vec3f_Mul(*LH.sVec3f, *RH.sVec3f, *Result.sVec3f)
   Declare Vec3d_Mul(*LH.sVec3d, *RH.sVec3d, *Result.sVec3d)
-  
+
   ; Divide two vectors
   Declare Vec3i_Div(*LH.sVec3i, *RH.sVec3i, *Result.sVec3i)
   Declare Vec3q_Div(*LH.sVec3q, *RH.sVec3q, *Result.sVec3q)
   Declare Vec3f_Div(*LH.sVec3f, *RH.sVec3f, *Result.sVec3f)
   Declare Vec3d_Div(*LH.sVec3d, *RH.sVec3d, *Result.sVec3d)
-  
+
   ; Normalise a vector
   Declare Vec3i_Normalise(*Vec.sVec3i, *Result.sVec3i)
   Declare Vec3q_Normalise(*Vec.sVec3q, *Result.sVec3q)
   Declare Vec3f_Normalise(*Vec.sVec3f, *Result.sVec3f)
   Declare Vec3d_Normalise(*Vec.sVec3d, *Result.sVec3d)
-  
+
   ; Calculate the length of vector
-  Declare.d Vec3i_Length(*Vec.sVec3i)
-  Declare.d Vec3q_Length(*Vec.sVec3q)
-  Declare.d Vec3f_Length(*Vec.sVec3f)
+  Declare.f Vec3i_Length(*Vec.sVec3i)
+  Declare.f Vec3q_Length(*Vec.sVec3q)
+  Declare.f Vec3f_Length(*Vec.sVec3f)
   Declare.d Vec3d_Length(*Vec.sVec3d)
-  
+
   ; Calculate the squared length of vector
-  Declare.d Vec3i_LengthSq(*Vec.sVec3i)
-  Declare.d Vec3q_LengthSq(*Vec.sVec3q)
-  Declare.d Vec3f_LengthSq(*Vec.sVec3f)
+  Declare.f Vec3i_LengthSq(*Vec.sVec3i)
+  Declare.f Vec3q_LengthSq(*Vec.sVec3q)
+  Declare.f Vec3f_LengthSq(*Vec.sVec3f)
   Declare.d Vec3d_LengthSq(*Vec.sVec3d)
-  
+
   ; Calculate the dot product of two vectors
-  Declare.d Vec3i_DotProduct(*LH.sVec3i, *RH.sVec3i)
-  Declare.d Vec3q_DotProduct(*LH.sVec3q, *RH.sVec3q)
-  Declare.d Vec3f_DotProduct(*LH.sVec3f, *RH.sVec3f)
+  Declare.f Vec3i_DotProduct(*LH.sVec3i, *RH.sVec3i)
+  Declare.f Vec3q_DotProduct(*LH.sVec3q, *RH.sVec3q)
+  Declare.f Vec3f_DotProduct(*LH.sVec3f, *RH.sVec3f)
   Declare.d Vec3d_DotProduct(*LH.sVec3d, *RH.sVec3d)
-  
+
   ; Calculate the cross product of two vectors
   Declare Vec3i_CrossProduct(*LH.sVec3i, *RH.sVec3i, *Result.sVec3i)
   Declare Vec3q_CrossProduct(*LH.sVec3q, *RH.sVec3q, *Result.sVec3q)
   Declare Vec3f_CrossProduct(*LH.sVec3f, *RH.sVec3f, *Result.sVec3f)
   Declare Vec3d_CrossProduct(*LH.sVec3d, *RH.sVec3d, *Result.sVec3d)
-  
+
   ; Calculate the distance between two vectors
-  Declare.d Vec3i_Distance(*LH.sVec3i, *RH.sVec3i)
-  Declare.d Vec3q_Distance(*LH.sVec3q, *RH.sVec3q)
-  Declare.d Vec3f_Distance(*LH.sVec3f, *RH.sVec3f)
+  Declare.f Vec3i_Distance(*LH.sVec3i, *RH.sVec3i)
+  Declare.f Vec3q_Distance(*LH.sVec3q, *RH.sVec3q)
+  Declare.f Vec3f_Distance(*LH.sVec3f, *RH.sVec3f)
   Declare.d Vec3d_Distance(*LH.sVec3d, *RH.sVec3d)
-  
+
   ; Calculate the squared distance between two vectors
-  Declare.d Vec3i_DistanceSq(*LH.sVec3i, *RH.sVec3i)
-  Declare.d Vec3q_DistanceSq(*LH.sVec3q, *RH.sVec3q)
-  Declare.d Vec3f_DistanceSq(*LH.sVec3f, *RH.sVec3f)
+  Declare.f Vec3i_DistanceSq(*LH.sVec3i, *RH.sVec3i)
+  Declare.f Vec3q_DistanceSq(*LH.sVec3q, *RH.sVec3q)
+  Declare.f Vec3f_DistanceSq(*LH.sVec3f, *RH.sVec3f)
   Declare.d Vec3d_DistanceSq(*LH.sVec3d, *RH.sVec3d)
 
 EndDeclareModule
@@ -153,22 +153,10 @@ Module Vector3
       If length = 0
         ProcedureReturn
       EndIf
-      length = Math::RSqr(length)      
+      length = Math::RSqr(length)
       *Result\x = *Vec\x * length
       *Result\y = *Vec\y * length
       *Result\z = *Vec\z * length
-    EndProcedure
-
-    Procedure.d Vec3#Type#_Length(*Vec.sVec3#Type)
-      ProcedureReturn Sqr(*Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z)
-    EndProcedure
-
-    Procedure.d Vec3#Type#_LengthSq(*Vec.sVec3#Type)
-      ProcedureReturn *Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z
-    EndProcedure
-
-    Procedure.d Vec3#Type#_DotProduct(*LH.sVec3#Type, *RH.sVec3#Type)
-      ProcedureReturn (*LH\x * *RH\x) + (*LH\y * *RH\y) + (*LH\z * *RH\z)
     EndProcedure
 
     Procedure Vec3#Type#_CrossProduct(*LH.sVec3#Type, *RH.sVec3#Type, *Result.sVec3#Type)
@@ -177,24 +165,131 @@ Module Vector3
       *Result\z = *LH\x * *RH\y - *LH\y * *RH\x
     EndProcedure
 
-    Procedure.d Vec3#Type#_Distance(*LH.sVec3#Type, *RH.sVec3#Type)
-      Protected.d vx, vy
-      vx = *LH\x - *RH\x
-      vy = *LH\y - *RH\y
-      vz = *LH\z - *RH\z
-      ProcedureReturn Sqr(vx * vx + vy * vy + vz * vz)
-    EndProcedure
-
-    Procedure.d Vec3#Type#_DistanceSq(*LH.sVec3#Type, *RH.sVec3#Type)
-      Protected.d vx, vy
-      vx = *LH\x - *RH\x
-      vy = *LH\y - *RH\y
-      vz = *LH\z - *RH\z
-      ProcedureReturn (vx * vx + vy * vy + vz * vz)
-    EndProcedure
-
   EndMacro
 
+  ImplementMethods(i)
+  ImplementMethods(q)
+  ImplementMethods(f)
+  ImplementMethods(d)
+
+  ;- Length Implementation
+  Procedure.f Vec3i_Length(*Vec.sVec3i)
+    ProcedureReturn Sqr(*Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z)
+  EndProcedure
+
+  Procedure.f Vec3q_Length(*Vec.sVec3q)
+    ProcedureReturn Sqr(*Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z)
+  EndProcedure
+
+  Procedure.f Vec3f_Length(*Vec.sVec3f)
+    ProcedureReturn Sqr(*Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z)
+  EndProcedure
+
+  Procedure.d Vec3d_Length(*Vec.sVec3d)
+    ProcedureReturn Sqr(*Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z)
+  EndProcedure
+
+  ;- LengthSq Implementation
+  Procedure.f Vec3i_LengthSq(*Vec.sVec3i)
+    ProcedureReturn *Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z
+  EndProcedure
+
+  Procedure.f Vec3q_LengthSq(*Vec.sVec3q)
+    ProcedureReturn *Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z
+  EndProcedure
+
+  Procedure.f Vec3f_LengthSq(*Vec.sVec3f)
+    ProcedureReturn *Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z
+  EndProcedure
+
+  Procedure.d Vec3d_LengthSq(*Vec.sVec3d)
+    ProcedureReturn *Vec\x * *Vec\x + *Vec\y * *Vec\y + *Vec\z * *Vec\z
+  EndProcedure
+
+  ;- DotProduct Implementation
+  Procedure.f Vec3i_DotProduct(*LH.sVec3i, *RH.sVec3i)
+    ProcedureReturn (*LH\x * *RH\x) + (*LH\y * *RH\y) + (*LH\z * *RH\z)
+  EndProcedure
+
+  Procedure.f Vec3q_DotProduct(*LH.sVec3q, *RH.sVec3q)
+    ProcedureReturn (*LH\x * *RH\x) + (*LH\y * *RH\y) + (*LH\z * *RH\z)
+  EndProcedure
+
+  Procedure.f Vec3f_DotProduct(*LH.sVec3f, *RH.sVec3f)
+    ProcedureReturn (*LH\x * *RH\x) + (*LH\y * *RH\y) + (*LH\z * *RH\z)
+  EndProcedure
+
+  Procedure.d Vec3d_DotProduct(*LH.sVec3d, *RH.sVec3d)
+    ProcedureReturn (*LH\x * *RH\x) + (*LH\y * *RH\y) + (*LH\z * *RH\z)
+  EndProcedure
+
+  ;- Distance Implementation
+  Procedure.f Vec3i_Distance(*LH.sVec3i, *RH.sVec3i)
+    Protected.i vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn Sqr(vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  Procedure.f Vec3q_Distance(*LH.sVec3q, *RH.sVec3q)
+    Protected.q vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn Sqr(vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  Procedure.f Vec3f_Distance(*LH.sVec3f, *RH.sVec3f)
+    Protected.f vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn Sqr(vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  Procedure.d Vec3d_Distance(*LH.sVec3d, *RH.sVec3d)
+    Protected.d vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn Sqr(vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  ;- DistanceSq Implementation
+  Procedure.f Vec3i_DistanceSq(*LH.sVec3i, *RH.sVec3i)
+    Protected.i vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn (vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  Procedure.f Vec3q_DistanceSq(*LH.sVec3q, *RH.sVec3q)
+    Protected.q vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn (vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  Procedure.f Vec3f_DistanceSq(*LH.sVec3f, *RH.sVec3f)
+    Protected.f vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn (vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  Procedure.d Vec3d_DistanceSq(*LH.sVec3d, *RH.sVec3d)
+    Protected.d vx, vy, vz
+    vx = *LH\x - *RH\x
+    vy = *LH\y - *RH\y
+    vz = *LH\z - *RH\z
+    ProcedureReturn (vx * vx + vy * vy + vz * vz)
+  EndProcedure
+
+  ;- ToString Implementation
   Procedure.s Vec3i_ToString(*Vec.sVec3i, Format.s = "<x, y, z>")
     Protected str.s = Format
     str = ReplaceString(str, "x", Str(*Vec\x), #PB_String_NoCase)
@@ -227,13 +322,9 @@ Module Vector3
     ProcedureReturn str
   EndProcedure
 
-  ImplementMethods(i)
-  ImplementMethods(q)
-  ImplementMethods(f)
-  ImplementMethods(d)
-
 EndModule
 ; IDE Options = PureBasic 6.00 Beta 7 (Linux - x64)
-; CursorPosition = 3
-; Folding = --
+; CursorPosition = 324
+; FirstLine = 284
+; Folding = -----
 ; EnableXP
