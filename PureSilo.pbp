@@ -8,15 +8,15 @@
   <section name="data">
     <explorer view="../../App/purebasic/examples/" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2022-05-14 16:46" user="micah" host="jarvis"/>
+    <lastopen date="2022-05-15 14:50" user="micah" host="jarvis"/>
   </section>
   <section name="files">
     <file name="examples/Log.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
       <fingerprint md5="54c387abba010954183da561ea35f840"/>
     </file>
     <file name="examples/VectorMaths.pb">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
       <fingerprint md5="5d3dec9a2bff74c2a91b0df610fa9914"/>
     </file>
     <file name="modules/log.pbi">
@@ -24,40 +24,52 @@
       <fingerprint md5="2a0fa4f1b9dffcd92f3c80c3fc231602"/>
     </file>
     <file name="modules/math/math.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="ca6a3a996da18c96fee4067d5031e895"/>
     </file>
     <file name="modules/math/rectangle.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="d6b335cd7f7e205e756986287f58dcfd"/>
     </file>
     <file name="modules/math/vector.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="++-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="d7e6ec51d589e4009fed2b475525d28e"/>
     </file>
     <file name="modules/math/vector2.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="8006afe1de391c9ab9b9a7938bcfa41a"/>
     </file>
     <file name="modules/math/vector3.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="bfb4e9f979a378e742ca4ca5abf93ada"/>
     </file>
     <file name="modules/math/vector4.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++-"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+++"/>
       <fingerprint md5="8e4ddaac4b8312610a87501220c0c7e6"/>
     </file>
     <file name="modules/string.pbi">
-      <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="++"/>
-      <fingerprint md5="35423af3f119eb75a152e074e6e1a490"/>
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="7b90b9dd7b2fd0136fddc97b77ea9332"/>
     </file>
     <file name="modules/types.pbi">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
       <fingerprint md5="4484dfce06d23f0ffbc71baa7d7854b5"/>
     </file>
+    <file name="modules/appconfig.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="97d39a58c1b9e541eabb49d5e409fa21"/>
+    </file>
+    <file name="examples/AppConfig.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="f226fb6c6d45df757cf6044d98451f05"/>
+    </file>
+    <file name="examples/appConfig.prefs">
+      <config load="0" scan="0" panel="1" warn="1" lastopen="1" panelstate="++"/>
+      <fingerprint md5="fe48effa45e7fc704dd3ae6911c7fa57"/>
+    </file>
   </section>
   <section name="targets">
-    <target name="Example - Vector Maths" enabled="1" default="1">
+    <target name="Example - Vector Maths" enabled="1" default="0">
       <inputfile value="examples/VectorMaths.pb"/>
       <outputfile value="examples/VectorMaths"/>
       <options xpskin="1" debug="1" optimizer="1"/>
@@ -66,6 +78,12 @@
     <target name="Example - Log" enabled="0" default="0">
       <inputfile value="examples/Log.pb"/>
       <outputfile value="examples/Log"/>
+      <options xpskin="1" debug="1" optimizer="1"/>
+      <format exe="console" cpu="0"/>
+    </target>
+    <target name="Example - AppConfig" enabled="1" default="1">
+      <inputfile value="examples/AppConfig.pb"/>
+      <outputfile value="examples/AppConfig"/>
       <options xpskin="1" debug="1" optimizer="1"/>
       <format exe="console" cpu="0"/>
     </target>
