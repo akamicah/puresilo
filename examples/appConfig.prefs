@@ -1,0 +1,10 @@
+SomeVariable = 1234
+
+[MyGroup]
+AnotherVariable = 5678
+
+[AnotherGroup]
+Greeting = Hello World
+
+[EnvVars]
+MyPathVar = $PATH
