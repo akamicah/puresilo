@@ -102,7 +102,8 @@ Module AppConfig
 
   Procedure SetAppConfig(Key.s, Value.s)
     With gAppConfig
-      String::RemoveIfLeft(Key, #AppConfig_Separator)
+      Key = String::RemoveIfLeft(Key, #AppConfig_Separator)
+      Key = String::RemoveIfRight(Key, #AppConfig_Separator)
       LockMutex(\mutex)
       \values(Key) = Value
       UnlockMutex(\mutex)
@@ -131,6 +132,6 @@ Module AppConfig
 
 EndModule
 ; IDE Options = PureBasic 6.00 Beta 7 (Linux - x64)
-; CursorPosition = 3
+; CursorPosition = 10
 ; Folding = --
 ; EnableXP
