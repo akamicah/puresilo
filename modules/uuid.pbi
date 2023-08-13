@@ -26,7 +26,7 @@ DeclareModule UUID
   
   Declare   MakeV3UUID(*output.sUUID, name.s, *namespace.sUUID = #Null)   ; - Generate a v3 UUID (MD5)
   Declare   MakeV4UUID(*output.sUUID)                                     ; - Generate a v4 UUID
-  Declare   MakeV5UUID(*output.sUUID, name.s, *namespace.sUUID = #Null)   ; - Generate a v3 UUID (SHA1)
+  Declare   MakeV5UUID(*output.sUUID, name.s, *namespace.sUUID = #Null)   ; - Generate a v5 UUID (SHA1)
   Declare   MakeNilUUID(*output.sUUID)                                    ; - Set data to zero
   Declare.s UUIDToString(*uuid.sUUID, braces = #False)                    ; - Generate a string representation of a UUID
   Declare   ParseUUID(string.s, *output.sUUID)                            ; - Parse a string representation of a UUID to a sUUID
